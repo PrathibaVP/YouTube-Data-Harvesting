@@ -462,30 +462,6 @@ with col2:
                                   'Comment_Author': sqlalchemy.types.VARCHAR(length=225),
                                   'Comment_Published_date': sqlalchemy.types.String(length=50), })
 
-# ====================================================   /     Channel Analysis zone     /   ================================================= #
-
-# st.header(':violet[Channel Data Analysis zone]')
-# st.write(
-#      '''(Note:- This zone **Analysis of a collection of channel data** depends on your question selection and gives a table format output.)''')
-#
-# # Check available channel data
-# Check_channel = st.checkbox('**Check available channel data for analysis**')
-#
-# if Check_channel:
-#     # Create database connection
-#     engine = create_engine('mysql+mysqlconnector://root:password@localhost/youtube_db', echo=False)
-#     # Execute SQL query to retrieve channel names
-#     query = "SELECT Channel_Name FROM channel;"
-#     results = pd.read_sql(query, engine)
-#     # Get channel names as a list
-#     channel_names_from_sql = list(results['Channel_Name'])
-#     # Create a DataFrame from the list and reset the index to start from 1
-#     df_at_sql = pd.DataFrame(channel_names_from_sql, columns=['Available channel data']).reset_index(drop=True)
-#     # Reset index to start from 1 instead of 0
-#     df_at_sql.index += 1
-#     # Show dataframe
-#     st.dataframe(df_at_sql)
-
 # -----------------------------------------------------     /   Questions   /    ------------------------------------------------------------- #
 st.subheader('Channels Analysis')
 
